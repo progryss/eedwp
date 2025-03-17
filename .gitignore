@@ -1,0 +1,32 @@
+# Ignore everything by default
+/*
+
+# Track specific plugins and themes
+!/wp-content/
+/wp-content/*
+!/wp-content/plugins/
+/wp-content/plugins/*
+!/wp-content/plugins/check-cam-tables/
+!/wp-content/plugins/company-accounts-manager/
+!/wp-content/plugins/hide-prices-for-guests/
+
+# Track child theme
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/storefront-child/
+
+# Track mu-plugins
+!/wp-content/mu-plugins/
+
+# Common files to ignore
+.DS_Store
+.idea/
+.vscode/
+*.log
+*.sql
+*.sqlite
+.htaccess
+wp-config.php 
+
+# Include .gitignore file
+!.gitignore
