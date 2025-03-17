@@ -1,0 +1,30 @@
+.hpfg-hidden-price-message {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #515151;
+    text-align: center;
+}
+
+.hpfg-hidden-price-message a {
+    color: #0073aa;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.hpfg-hidden-price-message a:hover {
+    color: #00a0d2;
+}
+
+/* Note: Add to cart button hiding is now handled by inline CSS */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hpfg-hidden-price-message {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+} 

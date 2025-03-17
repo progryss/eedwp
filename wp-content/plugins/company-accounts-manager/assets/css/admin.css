@@ -1,0 +1,147 @@
+/* Admin Dashboard Styles */
+.cam-dashboard-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.cam-stat-box {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    padding: 20px;
+    min-width: 200px;
+    flex: 1;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+}
+
+.cam-stat-box h3 {
+    margin: 0 0 10px;
+    color: #23282d;
+    font-size: 14px;
+}
+
+.cam-stat-number {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #0073aa;
+}
+
+.cam-dashboard-actions {
+    margin-top: 30px;
+}
+
+.cam-dashboard-actions .button {
+    margin-right: 10px;
+}
+
+/* Status Labels */
+.cam-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.cam-status-active {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.cam-status-pending {
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+}
+
+.cam-status-rejected {
+    background-color: #f2dede;
+    color: #a94442;
+}
+
+/* Modal Styles */
+.cam-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.cam-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    max-width: 500px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.cam-modal-actions {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cam-modal-actions .button {
+    margin-left: 10px;
+}
+
+/* Form Styles */
+.cam-form-row {
+    margin-bottom: 15px;
+}
+
+.cam-form-row label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.cam-form-row input[type="text"],
+.cam-form-row input[type="email"],
+.cam-form-row textarea {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Table Styles */
+.cam-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cam-table th,
+.cam-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.cam-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 782px) {
+    .cam-stat-box {
+        min-width: 100%;
+    }
+
+    .cam-modal-content {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .cam-table {
+        display: block;
+        overflow-x: auto;
+    }
+} 
