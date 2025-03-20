@@ -1,3 +1,274 @@
+
+@font-face {
+    font-family: "Arial Rounded MT Pro";
+    src: url("/wp-content/themes/storefront-child/fonts/ArialRoundedMTPro.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Arial Rounded MT Pro - Bold";
+    src: url("/wp-content/themes/storefront-child/fonts/ArialRoundedMTPro-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Arial Rounded MT Pro - Extra Bold";
+    src: url("/wp-content/themes/storefront-child/fonts/ArialRoundedMTPro-ExtraBold.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Arial Rounded MT Pro - Light";
+    src: url("/wp-content/themes/storefront-child/fonts/ArialRoundedMTPro-Light.woff2") format("woff2");
+}
+$font-normal: "Arial Rounded MT Pro", sans-serif;
+$font-light: "Arial Rounded MT Pro - Light", sans-serif;
+$font-bold: "Arial Rounded MT Pro - Bold", sans-serif;
+$font-extrabold: "Arial Rounded MT Pro - Extra Bold", sans-serif;
 body {
-    background-color: yellow;
+    background-color:#fff;
+    font-family: $font-normal;
+    font-size:16px;
+    line-height:1.6;
+}
+
+@mixin anchor-tag-style{
+    text-decoration: none;
+    color: inherit;
+    outline: none;   
+}
+// Footer SCSS
+$white-color: #fff;
+$black-color: #000000;
+$weight-400: 400; 
+$weight-500: 500; 
+$weight-600: 600; 
+$weight-700: 700; 
+$weight-800: 800; 
+$upper-footer-bg-color: #88888b; 
+$footer-bg-color: #6e6e72;        // Footer Footer background color 
+$footer-heading-font-size: 16px;   // Footer Heading font size
+$footer-para-font-size: 14px;     // Footer Paragraph font size
+
+
+// Start Footer CSS
+.upper-footer-main{
+    background: $upper-footer-bg-color; 
+    border-top: 5px solid #f60085;
+    padding: 30px 0; 
+.upper-footer-widgets {    
+    .widget.widget_block {
+        margin-bottom: 0;
+        
+        .wp-block-columns-is-layout-flex {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center!important;
+            gap:15px;
+            
+            .wp-block-column {
+                &:nth-child(1) {
+                    img{
+                        margin:auto;
+                    }
+                }
+                &:nth-child(2) {
+                    display: flex;
+                    align-items: center;
+                    gap:15px;
+                    img{
+                        width:initial!important;
+                    }
+                    ul{
+                        color:$white-color;
+                        margin-top: 0;
+                    }
+                }
+                &:nth-child(3) {
+                    display: flex;
+                align-items: center;
+                gap:15px;
+                .is-resized{
+                    margin-block-start: 24px;
+                    margin-top:0;
+                }
+                }
+            }
+        }
+    }
+}
+
+}
+.site-info{
+    display:none;
+}
+.site-footer{
+    background:$footer-bg-color;
+    padding-bottom:30px;
+}
+.custom-footer-widgets{
+    padding-top:0;
+    border-bottom: 0;
+    a {
+        @include anchor-tag-style;
+    }
+.footer-widgets-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+
+    .widget_nav_menu{
+        margin: 0 0 1.706326em;
+    }
+
+    .widget-title,
+    .wp-block-heading {
+        color: $white-color !important;
+        font-size: $footer-heading-font-size;
+        font-weight: $weight-600;
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0px;
+    }
+
+    .menu {
+        li {
+            &:before {
+                content: none !important;
+            }
+            padding-left: 0 !important;
+            margin-bottom: 5px !important;
+        }
+
+        a {
+            color: $white-color !important;
+            font-size: $footer-para-font-size;
+        }
+    }
+
+    .wp-block-list {
+        color: $white-color;
+    }
+
+    .footer-col-7 {
+        > .widget_block {
+            margin-bottom: 0;
+        }
+
+        ul.wp-block-social-links-is-layout-flex {
+            gap: 5px;
+            margin-bottom: 0;
+
+            li {
+                &:hover {
+                    transform: scale(1);
+                }
+                background: transparent;
+
+                a {
+                    padding: 0;
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+.footer-copyright{
+    color: #b7b7ba;
+    font-size: 14px;
+    padding-top:15px;
+    a{
+        color:#b7b7ba!important;
+                font-size:14px;
+    }
+}
+}
+
+.call-mail-main-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom:35px;
+  
+    .call-us-main,
+    .mail-us-main {
+        display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #00a591;
+            padding:7px;
+            border-radius: 50px;
+            width:200px;
+            max-width:100%;
+  
+      a,
+      .call-us-text {
+        @include anchor-tag-style;
+        color: #fff;
+        font-size: 20px;
+  
+        .icon-circle {
+          width: 50px;
+          height: 50px;
+          background: #32c2af;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          line-height: 0;
+        }
+      }
+    }
+    .call-us-main{
+        margin-right:10px;
+    }
+  }
+  
+
+// End Footer CSS
+@media (min-width: 1400px) {
+    .col-full {
+        padding: 0 8%;          
+    }
+}
+@media (min-width: 1200px) {
+    .call-mail-main-box {
+        display: none;          
+    }
+}
+@media (max-width: 991px) {
+    .footer-widgets-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .upper-footer-main {
+        .wp-block-columns-is-layout-flex {
+            .wp-block-column {
+                &:nth-child(1) {
+                    img {
+                        margin-left: 0 !important;
+                    }
+                }
+
+                &:nth-child(3) {
+                    justify-content: end;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .upper-footer-main {
+        .wp-block-columns-is-layout-flex {
+            flex-wrap: initial !important;
+
+            .wp-block-column:nth-child(2) {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .col-full {
+        max-width: 100%!important;           
+    }
 }
